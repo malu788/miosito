@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="it">
+  <head>
+<meta charset="UTF-8">
+<!--verifica codice-->
+<meta name="google-site-verification" content="JbrgF72KihVIUCb568YaD5EviDp6lpEKTGO6jw8xkH4" />
+
+<title>Diseño e Costruzione Web</title><style>
+
+/* 🔥 ANIMAZIONE CARICAMENTO PAGINA */
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #c0d0ec;
+  animation: fadeIn 1s ease-in;
+}
+
+/* definizione animazione */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg,#1c2c33, #2c5364);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* SEZIONI */
+section {
+  padding: 20px;
+}
+
+/* TITOLI */
+h2 {
+  color: #2c5364;
+}
+
+/* SERVIZI */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* CARD */
+.card {
+  background: #e7e2e2;
+  border-left: 5px solid #2c5364;
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+/* 💎 EFFETTO HOVER */
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* VIDEO */
+video {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* GALLERIA */
+.gallery img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+/* CONTATTO */
+.contact {
+  background: #0f2027;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* BOTTONE WHATSAPP */
+.btn {
+  background: #25D366;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* ☰ BOTTONE MENU */
+.menu-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 26px;
+  background: #2c5364;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* MENU LATERALE */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -220px;
+  width: 220px;
+  height: 100%;
+  background: #0f2027;
+  padding-top: 60px;
+  transition: 0.3s;
+}
+
+/* quando aperto */
+.menu.active {
+  right: 0;
+}
+
+/* link menu */
+.menu a {
+  display: block;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+}
+
+/* hover menu */
+.menu a:hover {
+  background: #2c5364;
+}
+
+/* 🔥 ANIMAZIONE SCROLL */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* scroll morbido */
+html {
+  scroll-behavior: smooth;
+}
+
+</style></head><body><!-- ☰ MENU --><button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  
+<div id="menu" class="menu">
+  <a href="#mission" onclick="closeMenu()">Misión</a>
+  <a href="#about" onclick="closeMenu()">Chi siamo</a>
+  <a href="#services" onclick="closeMenu()">Servicios</a>
+</div><!-- HEADER --><header>
+  
+
+  <h1>Diseño e Construcción de Páginas Web</h1>
+</header><!-- 🎯 MISSION --><section id="mission" class="hidden">
+  <h2>🎯 Misión</h2>
+  <p>Ayudamos a empresas a crecer con soluciones digitales modernas.</p>
+</section><!-- 👤 ABOUT --><section id="about" class="hidden">
+  <h2>👤 Chi siamo</h2>
+  <p>Somos especialistas en desarrollo web y aplicaciones móviles.</p>
+</section><!-- 💼 SERVICIOS --><section id="services" class="hidden">
+  <h2>Servicios</h2> <div class="services">
+    <div class="card">
+      <h3>Páginas Web</h3>
+      <p>Desarrollo con HTML, CSS y JavaScript.</p>
+    </div><div class="card">
+  <h3>App Mobile</h3>
+  <p>Apps Android y Flutter.</p>
+</div>
+
+<div class="card">
+  <h3>Backend</h3>
+  <p>Firebase y bases de datos.</p>
+</div>
+
+  </div>
+</section><!-- 🎬 VIDEO --><section style="text-align:center;" class="hidden">
+  <h2>🎬 Demo App</h2>
+  <video controls>
+    <source src="fotos/VID-20260413-WA0004.mp4" type="video/mp4">
+  </video>
+</section><!-- 📸 GALLERIA --><section class="hidden">
+  <h2>📸 Progetti</h2>
+  <div class="gallery">
+    <img src="fotos/1000164874 (1).jpg">
+    <img src="fotos/1000164878 (1).jpg">
+    <img src="fotos/1000164884.jpg">
+  </div>
+</section><!-- 📞 CONTATTO --><section class="contact hidden">
+  <h2>Contatto</h2>
+  <p>📞 +57 310 3875988</p>
+  <a class="btn" href="https://wa.me/573103875988" target="_blank">WhatsApp</a>
+</section><!-- 🔥 JAVASCRIPT --><script>
+
+/* apertura menu */
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+
+/* chiusura menu */
+function closeMenu() {
+  document.getElementById("menu").classList.remove("active");
+}
+
+/* animazione scroll */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
+
+</script></body>
+</html>
