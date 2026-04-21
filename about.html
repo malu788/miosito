@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi siamo</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+
+      background: linear-gradient(#0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      padding: 80px 20px;
+    }
+
+    .box {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 18px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #00c6ff;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi siamo</title>
+</head>
+
+<body style="background:#111; color:white; text-align:center; padding-top:100px;">
+
+<button onclick="setLanguage('it')">🇮🇹 IT</button>
+<button onclick="setLanguage('es')">🇪🇸 ES</button>
+
+
+<h1 
+data-it="Chi siamo" 
+data-es="Quiénes somos">
+Chi siamo
+</h1>
+
+<p 
+data-it="Sto imparando programmazione e sviluppo applicazioni mobile e siti web." 
+data-es="Estoy aprendiendo programación y desarrollo de aplicaciones móviles y sitios web.">
+Sto imparando programmazione e sviluppo applicazioni mobile e siti web.
+</p>
+
+<p 
+data-it="Ho già realizzato una app per una sartoria, che aiuta a gestire clienti e servizi." 
+data-es="Ya he creado una aplicación para una sastrería, que ayuda a gestionar clientes y servicios.">
+Ho già realizzato una app per una sartoria, che aiuta a gestire clienti e servizi.
+</p>
+
+<p 
+data-it="Attualmente sto sviluppando una nuova applicazione per un negozio, con gestione prodotti, prezzi e ordini." 
+data-es="Actualmente estoy desarrollando una nueva aplicación para una tienda, con gestión de productos, precios y pedidos.">
+Attualmente sto sviluppando una nuova applicazione per un negozio, con gestione prodotti, prezzi e ordini.
+</p>
+
+<p 
+data-it="Il mio obiettivo è aiutare le attività a crescere con soluzioni digitali moderne." 
+data-es="Mi objetivo es ayudar a los negocios a crecer con soluciones digitales modernas.">
+Il mio obiettivo è aiutare le attività a crescere con soluzioni digitali moderne.
+</p>
+
+<p 
+data-it="Contatto WhatsApp: 391 146 2781" 
+data-es="Contacto WhatsApp: 391 146 2781">
+Contatto WhatsApp: 391 146 2781
+</p>
+
+
+<a href="index.html">← Torna</a>
+
+
+
+
+
+</body>
+<script>
+function setLanguage(lang) {
+  document.querySelectorAll("[data-it]").forEach(el => {
+    el.textContent = el.getAttribute("data-" + lang);
+  });
+}
+</script>
+</html>

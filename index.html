@@ -1,0 +1,491 @@
+<!DOCTYPE html><html lang="it">
+  <head>
+<meta charset="UTF-8">
+<!--verifica codice-->
+
+<meta name="google-site-verification" content="4gAppl0qvzbnGmuzEgnT2g0vJtQYVv6WWCEN7AzCUso" />
+
+
+<title>Crostrucciòn Siti Web | Diseño Web Italia Colombia</title><style>
+
+/* 🔥 ANIMAZIONE CARICAMENTO PAGINA */
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f2f3f5;
+  animation: fadeIn 1s ease-in;
+}
+
+/* definizione animazione */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg,#1c2c33, #2c5364);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* SEZIONI */
+section {
+  padding: 20px;
+}
+
+/* TITOLI */
+h2 {
+  color: #2c5364;
+}
+
+/* SERVIZI */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* CARD */
+.card {
+  background: #e7e2e2;
+  border-left: 5px solid #2c5364;
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+/* 💎 EFFETTO HOVER */
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* VIDEO */
+video {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* GALLERIA */
+.gallery img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+/* CONTATTO */
+.contact {
+  background: #0f2027;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* BOTTONE WHATSAPP */
+.btn {
+  background: #25D366;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* ☰ BOTTONE MENU */
+.menu-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 26px;
+  background: #2c5364;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* MENU LATERALE */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -220px;
+  width: 220px;
+  height: 100%;
+  background: #0f2027;
+  padding-top: 60px;
+  transition: 0.3s;
+}
+
+/* quando aperto */
+.menu.active {
+  right: 0;
+}
+
+/* link menu */
+.menu a {
+  display: block;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+}
+
+/* hover menu */
+.menu a:hover {
+  background: #2c5364;
+}
+
+/* 🔥 ANIMAZIONE SCROLL */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* scroll morbido */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+/*FINISCE */
+
+/* 🔥 sfondo canvas */
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* dietro a tutto */
+}
+
+/* rende il contenuto sopra */
+body {
+  position: relative;
+  z-index: 1;
+}
+
+/* 🌌 canvas sfondo */
+#galaxy {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle at center, #0f2027, #000000);
+}
+
+/* contenuto sopra */
+body {
+  position: relative;
+  z-index: 1;
+}
+
+.card-3d {
+  width: 300px;
+  margin: 40px auto;
+  perspective: 1200px;
+}
+
+.card-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease;
+}
+
+/* immagine */
+.card-inner img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  transform: translateZ(30px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+}
+
+/* testo sopra */
+.info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background: rgba(0,0,0,0.6);
+  padding: 10px;
+  border-radius: 10px;
+  transform: translateZ(50px);
+}
+
+/* effetto luce */
+.shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.3), transparent 60%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+/* testo sotto immagine */
+.info-below {
+  text-align: center;
+  margin-top: 15px;
+  color: white;
+}
+
+.info-below h3 {
+  margin: 5px 0;
+}
+
+.info-below p {
+  margin: 0;
+  color: #00ffcc;
+  font-weight: bold;
+}
+
+
+
+
+</style></head><body><!-- ☰ MENU --><button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+
+
+<script>
+function setLanguage(lang) {
+  const elements = document.querySelectorAll("[data-it]");
+
+  elements.forEach(el => {
+    el.textContent = el.getAttribute("data-" + lang);
+  });
+}
+</script>
+
+
+
+
+
+
+<!---BODY-FOTO PC->
+
+<!-- 🌌 SFONDO GALASSIA -->
+<canvas id="galaxy"></canvas>
+
+
+
+
+
+<!--COOLEGAMENTO PAGINA-->
+  
+<div id="menu" class="menu">
+  <a href="mission.html" >Misión</a>
+  <a href="about.html">Chi siamo</a>
+  <a href="#services" onclick="closeMenu()">Servicios</a>
+  
+</div><!-- HEADER --><header>
+<!---Traduzione-->
+  <div style="position:absolute; top:10px; left:10px;">
+  <button onclick="setLanguage('it')">🇮🇹 IT</button>
+  <button onclick="setLanguage('es')">🇪🇸 ES</button>
+</div>
+
+  <h1 data-it="Disengno e Construzione de Pagina Web"
+  data-es="Diseño e Construcción de Páginas Web">Diseño e Construcción de Páginas Web</h1>
+
+</header><!-- 🎯 MISSION --><section id="mission" class="hidden">
+  
+  
+</section><!-- 👤 ABOUT --><section id="about" class="hidden">
+  <!---collegamenti app-->
+  
+  
+
+
+  
+
+</section><!-- 💼 SERVICIOS --><section id="services" class="hidden">
+  <h2 data-it="Servizi" 
+  data-es="Servicios">Servizi</h2> <div class="services">
+    <div class="card">
+      
+      <h3 data-it="Siti Web" data-es="Páginas Web">Siti Web</h3>
+      
+  
+      <p>Desarrollo con HTML, CSS y JavaScript.</p>
+    </div><div class="card">
+  <h3>App Mobile</h3>
+  <p>Apps Android y Flutter.</p>
+</div>
+
+<div class="card">
+  <h3>Backend</h3>
+  <p>Firebase y bases de datos.</p>
+</div>
+
+  </div>
+</section><!-- 🎬 VIDEO --><section style="text-align:center;" class="hidden">
+  <h2>🎬 Demo App</h2>
+  <video controls width="300">
+    <source src="fotos/vedeo1.mp4">
+  </video>
+</section><!-- 📸 GALLERIA --><section class="hidden">
+  <h2>📸 Progetti</h2>
+  <div class="gallery">
+    <img src="fotos/foto1.jpg" width="200">
+    <img src="fotos/foto2.jpg" width="200">
+    <img src="fotos/foto3.jpg" width="200">
+  </div>
+
+
+<div class="github-section">
+  <h2>💻 I miei progetti su GitHub</h2>
+
+  <a href="https://github.com/malu7878/app_sartoria" target="_blank" class="btn">
+    🔗 App Sartoria (Codice)
+  </a>
+
+  <a href="https://github.com/malu7878/tinda24_app" target="_blank" class="btn">
+    🔗 App Negozio (Codice)
+  </a>
+</div>
+
+
+
+
+
+
+
+
+</section><!-- 📞 CONTATTO --><section class="contact hidden">
+  <h2>Contatto</h2>
+  <p>📞 +57 310 3875988</p>
+  <a class="btn" href="https://wa.me/573103875988" target="_blank">WhatsApp</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section><!-- 🔥 JAVASCRIPT --><script>
+
+/* apertura menu */
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+
+/* chiusura menu */
+function closeMenu() {
+  document.getElementById("menu").classList.remove("active");
+}
+
+/* animazione scroll */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
+
+
+// 🔥 effetto 3D con mouse
+
+const card = document.querySelector(".card-3d-game");
+
+if (card) {
+  const img = card.querySelector("img");
+
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = -(y - centerY) / 8;
+    const rotateY = (x - centerX) / 8;
+
+    img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    img.style.transform = "rotateX(0) rotateY(0) scale(1)";
+  });
+}
+
+
+<!---FONDE PGINA-->
+const canvas = document.getElementById("galaxy");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let stars = [];
+
+for (let i = 0; i < 150; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    size: Math.random() * 2,
+    speed: Math.random() * 1
+  });
+}
+
+function animateGalaxy() {
+  ctx.fillStyle = "rgba(0,0,0,0.3)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+ ctx.fillStyle = Math.random() > 0.5 ? "#00c6ff" : "#ffffff";
+
+  stars.forEach(star => {
+    star.y += star.speed;
+
+    if (star.y > canvas.height) {
+      star.y = 0;
+      star.x = Math.random() * canvas.width;
+    }
+
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+    ctx.fill();
+  });
+
+  requestAnimationFrame(animateGalaxy);
+}
+
+animateGalaxy();
+
+
+</script></body>
+</html>

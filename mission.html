@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Misión / Mission</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: linear-gradient(135deg, #0f2027, #2c5364);
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #00c6ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+
+    /*PAGINA MISION INDEX*/
+    /* 🔥 CONTENITORE 3D */
+.card-3d {
+  width: 300px;
+  margin: 40px auto;
+  perspective: 1000px;
+}
+
+/* 🔥 IMMAGINE */
+.card-3d img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.2s;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* 🔥 TESTO SOPRA */
+.card-3d .info {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+/* 🔥 SFONDO CON FOTO */
+body {
+  margin: 0;
+  font-family: Arial;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+    url("fotos/foto4.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: white;
+  text-align: center;
+}
+
+/* 🔥 CONTENUTO CENTRATO */
+.container {
+  padding-top: 100px;
+}
+
+/* 🔥 BOTTONE */
+.btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #00c6ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* 💎 VETRO */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+
+  transition: transform 0.2s ease;
+}
+
+
+
+
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>🎯 Misión</h1>
+
+  <p>
+    Ayudamos a empresas a crecer con páginas web modernas,<br>
+    aplicaciones móviles y sistemas digitales.<br><br>
+    Aiutiamo le aziende a crescere con siti web moderni,<br>
+    app e soluzioni digitali.
+  </p>
+
+  <button class="btn" onclick="history.back()">← Tornar / Torna</button>
+
+</div>
+
+
+  <!-- 🔽 TESTO SOTTO -->
+  <div class="info-below">
+    <h3>Maria Luisa</h3>
+    <p>📞 WhatsApp: 391 146 2781</p>
+  </div>
+</div>
+
+    <!-- luce -->
+    <div class="shine"></div>
+  </div>
+</div>
+
+
+<script>
+const glass = document.getElementById("glass");
+
+document.addEventListener("mousemove", (e) => {
+  const x = (window.innerWidth / 2 - e.clientX) / 30;
+  const y = (window.innerHeight / 2 - e.clientY) / 30;
+
+  glass.style.transform = `
+    rotateX(${y}deg)
+    rotateY(${x}deg)
+  `;
+});
+</script>
+</body>
+</html>
